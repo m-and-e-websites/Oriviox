@@ -79,27 +79,6 @@
             transform: scale(1.05);
         }
 
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-text h1 {
-            font-size: 32px;
-            color: var(--primary-blue);
-            letter-spacing: 1.5px;
-            line-height: 1;
-            font-weight: 700;
-        }
-
-        .logo-text p {
-            font-size: 13px;
-            color: var(--gray);
-            letter-spacing: 1px;
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
         nav ul {
             display: flex;
             list-style: none;
@@ -600,10 +579,6 @@
                 height: 50px;
             }
             
-            .logo-text h1 {
-                font-size: 28px;
-            }
-            
             .circle {
                 width: 280px;
                 height: 280px;
@@ -627,20 +602,8 @@
                 padding: 12px 30px;
             }
             
-            .logo {
-                gap: 10px;
-            }
-            
             .logo-img {
                 height: 45px;
-            }
-            
-            .logo-text h1 {
-                font-size: 24px;
-            }
-            
-            .logo-text p {
-                font-size: 11px;
             }
             
             .products, .about {
@@ -659,12 +622,8 @@
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
-                <!-- FIXED: Simple path since both files are in same folder -->
-                <img src="IMG_8370.jpg" alt="Oriviox Logo" class="logo-img">
-                <div class="logo-text">
-                    <h1>ORIVIOX</h1>
-                    <p>PURE AIR, PERFECT LIFE</p>
-                </div>
+                <!-- Logo image only - no text -->
+                <img src="IMG_8370.jpg" alt="Oriviox" class="logo-img">
             </a>
             
             <nav>
@@ -920,7 +879,6 @@
             logoImg.addEventListener('error', function() {
                 console.log('❌ Logo failed to load. Check the file name and location.');
                 console.log('Current src:', this.src);
-                console.log('Trying to load from:', window.location.href + this.src);
             });
         });
     </script>
