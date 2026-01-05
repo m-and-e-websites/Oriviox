@@ -659,7 +659,7 @@
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
-                <!-- Your actual logo image -->
+                <!-- FIXED: Simple path since both files are in same folder -->
                 <img src="IMG_8370.jpg" alt="Oriviox Logo" class="logo-img">
                 <div class="logo-text">
                     <h1>ORIVIOX</h1>
@@ -908,6 +908,19 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+        
+        // Debug: Check if logo loads
+        window.addEventListener('load', function() {
+            const logoImg = document.querySelector('.logo-img');
+            logoImg.addEventListener('load', function() {
+                console.log('✅ Logo loaded successfully!');
+            });
+            logoImg.addEventListener('error', function() {
+                console.log('❌ Logo failed to load. Check the file name and location.');
+                console.log('Current src:', this.src);
+                console.log('Trying to load from:', window.location.href + this.src);
             });
         });
     </script>
